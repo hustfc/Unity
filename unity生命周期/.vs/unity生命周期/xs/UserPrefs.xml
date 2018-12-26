@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{FCA4D0E2-F536-3772-4949-0614D09DD3FB}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/test.cs">
+    <Files>
+      <File FileName="Assets/Scenes/test.cs" Line="15" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/fanc/Documents/GitHub/Unity/unity生命周期/Assets/Scenes/test.cs" relfile="Assets/Scenes/test.cs" line="15" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

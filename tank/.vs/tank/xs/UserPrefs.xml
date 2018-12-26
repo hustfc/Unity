@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{D601D269-876B-43DB-7E0E-E0BB98805469}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Heart.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="78" Column="20" />
+      <File FileName="Assets/Scripts/bullet.cs" Line="31" Column="24" />
+      <File FileName="Assets/Scripts/Explosion.cs" Line="12" Column="5" />
+      <File FileName="Assets/Scripts/Heart.cs" Line="10" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
