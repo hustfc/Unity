@@ -119,4 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f7415efc4e94451b21121e2acc5718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 0}
   brokeSprite: {fileID: 21300012, guid: 529e000d42d32de49bc475716ba7ae37, type: 3}

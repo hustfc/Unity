@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{D601D269-876B-43DB-7E0E-E0BB98805469}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Heart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Born.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="78" Column="20" />
-      <File FileName="Assets/Scripts/bullet.cs" Line="31" Column="24" />
-      <File FileName="Assets/Scripts/Explosion.cs" Line="12" Column="5" />
-      <File FileName="Assets/Scripts/Heart.cs" Line="10" Column="9" />
+      <File FileName="Assets/Scripts/Player.cs" Line="117" Column="24" />
+      <File FileName="Assets/Scripts/bullet.cs" Line="34" Column="22" />
+      <File FileName="Assets/Scripts/Explosion.cs" Line="26" Column="2" />
+      <File FileName="Assets/Scripts/Heart.cs" Line="20" Column="6" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="125" Column="1" />
+      <File FileName="Assets/Scripts/Born.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

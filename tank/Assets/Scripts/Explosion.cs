@@ -5,14 +5,22 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     // Start is called before the first frame update
+    private float timeVal;
     void Start()
     {
-        Destroy(gameObject, 0.167f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(timeVal < 0.167f)
+        {
+            timeVal += Time.deltaTime;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

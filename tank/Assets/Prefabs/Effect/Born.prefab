@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4145872730316526408}
   - component: {fileID: 4145872730316526409}
+  - component: {fileID: 8950407565860362249}
   - component: {fileID: 4145872730316526406}
   m_Layer: 0
   m_Name: Born
@@ -80,6 +81,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8950407565860362249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145872730316526407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c26610e5c53247e6a03122e11349c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerPrefab: {fileID: 2244306481840214402, guid: d1944f0c0138a49d1992ad9fc64bca62,
+    type: 3}
 --- !u!95 &4145872730316526406
 Animator:
   serializedVersion: 3

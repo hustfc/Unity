@@ -7,6 +7,8 @@ public class Heart : MonoBehaviour
 
     private SpriteRenderer sr;
     // Start is called before the first frame update
+    public GameObject explosionPrefab;
+
     public Sprite brokeSprite;
     void Start()
     {
@@ -22,5 +24,10 @@ public class Heart : MonoBehaviour
     void Die()
     {
         sr.sprite = brokeSprite;
+        //if(explosionPrefab != null)
+        explosionPrefab.SetActive(true);
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
+
+
     }
 }
