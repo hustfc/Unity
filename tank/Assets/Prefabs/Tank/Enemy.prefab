@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b00c5c11f124b089587ae50a7e5e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 3
+  tankSprite: []
+  bulletPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 0}
+  shieldPrefab: {fileID: 0}
 --- !u!212 &9133946597472433192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140,4 +145,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

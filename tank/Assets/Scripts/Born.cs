@@ -6,6 +6,9 @@ public class Born : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject PlayerPrefab;
+    public GameObject[] enemyPrefabList; //敌人预制体列表
+    public bool createPlayer;
+
     void Start()
     {
         Invoke("BornTank", 0.8f);
@@ -19,6 +22,15 @@ public class Born : MonoBehaviour
     }
     private void BornTank()
     {
-        Instantiate(PlayerPrefab, transform.position, Quaternion.identity);//无旋转
+        if (createPlayer)
+        {
+            Instantiate(PlayerPrefab, transform.position, Quaternion.identity);//无旋转
+        }
+        else
+        {
+            int num = Random.Range(0, 2);
+            Instantiate(enemyPrefabList[num], transform.position, Quaternion.identity);//无旋转
+        }
+
     }
 }

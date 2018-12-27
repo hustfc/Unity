@@ -25,7 +25,7 @@ public class Heart : MonoBehaviour
     {
         sr.sprite = brokeSprite;
         //if(explosionPrefab != null)
-        explosionPrefab.SetActive(true);
+        //explosionPrefab.SetActive(true);
         Instantiate(explosionPrefab, transform.position, transform.rotation);
 
 
