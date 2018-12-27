@@ -8,8 +8,9 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 3;
     private Vector3 bulletEulerAngles;
     private float timeVal;
-    private bool isDefended = true;
-    private float defendTimeVal = 3;//玩家无敌时间
+    private float timeValChangeDirection; //改变方向的时间计时器
+    private float v;
+    private float h;
 
     //引用
     private SpriteRenderer sr; //声明sr的类型
@@ -31,19 +32,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //保护是否处于无敌状态
-        if (isDefended)
-        {
-            shieldPrefab.SetActive(true);
-            defendTimeVal -= Time.deltaTime;
-            if (defendTimeVal <= 0)
-            {
-                isDefended = false;
-                shieldPrefab.SetActive(false);
-            }
-        }
-        //攻击CD
-        if (timeVal > 0.4f)
+
+        //攻击的时间间隔
+        if (timeVal > 1f)
         {
             Attack();
         }
@@ -60,7 +51,36 @@ public class Enemy : MonoBehaviour
 
     private void Move() //坦克的移动方法
     {
-        float v = Input.GetAxis("Vertical");
+        if(timeValChangeDirection >= 2f)
+        {
+            int num = Random.Range(0, 8);//往下面走的几率最大
+            if(num > 5)
+            {
+                v = -1;
+                h = 0;
+            }
+            else if(num == 0)   //往上走的几率最小
+            {
+                v = 1;
+                h = 0;
+            }
+            else if(num > 0 && num <= 2)
+            {
+                h = -1;
+                v = 0;
+            }
+            else
+            {
+                h = 1;
+                v = 0;
+            }
+            timeValChangeDirection = 0;
+        }
+        else
+        {
+            timeValChangeDirection += Time.fixedDeltaTime;
+        }
+        //v = Input.GetAxis("Vertical");
         if (v < 0)
         {
             sr.sprite = tankSprite[2];
@@ -79,7 +99,7 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        float h = Input.GetAxis("Horizontal");
+        //h = Input.GetAxis("Horizontal");
         //输入乘以速度乘以时间， 第二个参数是以什么坐标轴来移动
         //transform.Translate(Vector3.right * h, Space.World);
         if (h < 0)
@@ -100,23 +120,15 @@ public class Enemy : MonoBehaviour
     //坦克的攻击方法
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //实例化函数 第一个参数为object，第二个为位置，第三个为旋转
-            Debug.Log(transform.eulerAngles);
-            Debug.Log(bulletEulerAngles);
-            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletEulerAngles));
-            timeVal = 0;
-        }
+        //实例化函数 第一个参数为object，第二个为位置，第三个为旋转
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletEulerAngles));
+        timeVal = 0;
+
     }
 
     //玩家的死亡方法
     private void Die()
     {
-        if (isDefended)
-        {
-            return;
-        }
         //产生爆炸特效
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         //死亡
