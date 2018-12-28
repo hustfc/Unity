@@ -138,4 +138,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)  //刚体碰撞检测，注意需要时2D
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            timeValChangeDirection = 4f;   //让直接有角度的旋转
+        }
+    }
 }

@@ -26,9 +26,9 @@ public class bullet : MonoBehaviour
             case "Tank":
                 if (!isPlayerBullet)
                 {
-                    collision.SendMessage("Die");  
+                    collision.SendMessage("Die");
+                    Destroy(gameObject);
                 }
-                Destroy(gameObject);
                 break; 
             case "Heart":
                 collision.SendMessage("Die");
@@ -38,8 +38,8 @@ public class bullet : MonoBehaviour
                 if (isPlayerBullet)
                 {
                     collision.SendMessage("Die");
+                    Destroy(gameObject);
                 }
-                Destroy(gameObject);
                 break;
             case "Wall":
                 Destroy(collision.gameObject);//销毁墙
