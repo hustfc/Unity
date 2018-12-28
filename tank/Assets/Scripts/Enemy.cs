@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 3;
     private Vector3 bulletEulerAngles;
     private float timeVal;
-    private float timeValChangeDirection = 4; //改变方向的时间计时器，一开始就移动
-    private float v;
+    private float timeValChangeDirection; //改变方向的时间计时器，一开始就移动
+    private float v = -1;
     private float h;
 
     //引用
@@ -129,9 +129,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-    //玩家的死亡方法
+    //坦克的死亡方法
     private void Die()
     {
+
+        PlayerManager.Instance.playerScore += 1;
         //产生爆炸特效
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         //死亡

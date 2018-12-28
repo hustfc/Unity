@@ -104,8 +104,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //实例化函数 第一个参数为object，第二个为位置，第三个为旋转
-            Debug.Log(transform.eulerAngles);
-            Debug.Log(bulletEulerAngles);
             Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletEulerAngles));
             timeVal = 0;
         }
@@ -118,6 +116,8 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        PlayerManager.Instance.isDead = true;
+
         //产生爆炸特效
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         //死亡
