@@ -46,4 +46,8 @@ MonoBehaviour:
   lifeValue: 3
   playerScore: 0
   isDead: 0
+  isDefeat: 0
   born: {fileID: 4145872730316526407, guid: bca3d0ad28c0048f7ac2e3628c0e2924, type: 3}
+  playerScoreText: {fileID: 0}
+  playerLifeText: {fileID: 0}
+  isDefeatUI: {fileID: 0}
