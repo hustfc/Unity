@@ -43,20 +43,25 @@ public class Player : MonoBehaviour
                 shieldPrefab.SetActive(false);
             }
         }
-        //攻击CD
-        if (timeVal > 0.4f)
-        {
-            Attack();
-        } 
-        else
-        {
-            timeVal += Time.deltaTime;
-        }
+
     }
 
     private void FixedUpdate() //固定物理帧声明周期函数
     {
+        if (PlayerManager.Instance.isDefeat)
+        {
+            return;
+        }
         Move();
+        //攻击CD
+        if (timeVal > 0.4f)
+        {
+            Attack();
+        }
+        else
+        {
+            timeVal += Time.fixedDeltaTime;
+        }
     }
 
     private void Move() //坦克的移动方法
@@ -116,7 +121,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        PlayerManager.Instance.isDead = true;
+        PlayerManager.Instance.isDead = true;   //让玩家管理里面的属性变为true
 
         //产生爆炸特效
         Instantiate(explosionPrefab, transform.position, transform.rotation);

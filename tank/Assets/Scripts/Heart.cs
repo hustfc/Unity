@@ -23,11 +23,12 @@ public class Heart : MonoBehaviour
 
     void Die()
     {
+
         sr.sprite = brokeSprite;
         //if(explosionPrefab != null)
         //explosionPrefab.SetActive(true);
         Instantiate(explosionPrefab, transform.position, transform.rotation);
-
+        PlayerManager.Instance.isDefeat = true;
 
     }
 }
