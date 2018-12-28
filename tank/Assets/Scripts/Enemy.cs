@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 3;
     private Vector3 bulletEulerAngles;
     private float timeVal;
-    private float timeValChangeDirection; //改变方向的时间计时器
+    private float timeValChangeDirection = 4; //改变方向的时间计时器，一开始就移动
     private float v;
     private float h;
 
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public Sprite[] tankSprite; //声明精灵(sprite)数组 上 右 下 左
     public GameObject bulletPrefab;
     public GameObject explosionPrefab;
-    public GameObject shieldPrefab;
+    //public GameObject shieldPrefab;
 
     private void Awake()  //在awake里面就拿到引用
     {
@@ -31,8 +31,7 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
+    { 
         //攻击的时间间隔
         if (timeVal > 1f)
         {
@@ -120,9 +119,13 @@ public class Enemy : MonoBehaviour
     //坦克的攻击方法
     private void Attack()
     {
+
         //实例化函数 第一个参数为object，第二个为位置，第三个为旋转
+        Debug.Log("Enemy's bullet" + bulletEulerAngles);
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletEulerAngles));
         timeVal = 0;
+
+
 
     }
 

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\MapCeation.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/fanc/Documents/GitHub/Unity/tank/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
