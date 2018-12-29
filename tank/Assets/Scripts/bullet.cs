@@ -39,6 +39,7 @@ public class bullet : MonoBehaviour
                 {
                     collision.SendMessage("Die");
                     Destroy(gameObject);
+
                 }
                 break;
             case "Wall":

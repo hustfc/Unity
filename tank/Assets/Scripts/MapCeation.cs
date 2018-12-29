@@ -10,6 +10,11 @@ public class MapCeation : MonoBehaviour
     private int numOfObject = 80; //随机化物体的数量
     private void Awake()
     {
+        InitialMap();
+    }
+
+    private void InitialMap()
+    {
         //实例化老家
         CreateItem(item[0], new Vector3(0, -8, 0), Quaternion.identity);//物体 坐标 无旋转
         //墙围着老家
