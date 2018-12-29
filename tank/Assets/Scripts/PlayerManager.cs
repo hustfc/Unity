@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class PlayerManager : MonoBehaviour
         if(lifeValue <= 0)
         {
             isDefeat = true;
+            Invoke("ReturnToMain", 3f);
         }
         else
         {
@@ -73,5 +75,10 @@ public class PlayerManager : MonoBehaviour
             go.GetComponent<Born>().createPlayer = true;
             isDead = false;
         }
+    }
+
+    private void ReturnToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 }

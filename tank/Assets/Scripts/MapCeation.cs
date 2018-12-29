@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MapCeation : MonoBehaviour
 {
+    public AudioClip startAudio;
     public GameObject[] item; //定义存放gameobject的数组
     //0.老家 1.墙 2.障碍  3.河流 4.草 5.出生效果 6.空气墙
     private List<Vector3> itemPosition = new List<Vector3>();//已经有东西位置的列表
     private int numOfObject = 80; //随机化物体的数量
     private void Awake()
     {
+        AudioSource.PlayClipAtPoint(startAudio, transform.position);
         InitialMap();
     }
 

@@ -889,6 +889,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2721723739017263030, guid: 582c5387558c24cafac0de22e67cdd6d,
+        type: 3}
+      propertyPath: startAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 17edce2214dd311489c133cdafd09a9a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 582c5387558c24cafac0de22e67cdd6d, type: 3}
 --- !u!1001 &7063491868792238914

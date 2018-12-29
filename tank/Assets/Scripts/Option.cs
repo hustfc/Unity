@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Option : MonoBehaviour
 {
-    private int choice = 0;
+    private int choice = 1;
     public Transform posOne;
     public Transform posTow;
 
